@@ -10,12 +10,18 @@ pip install -r requirements.txt
 playwright install
 ```
 
-### pytest
+### Run the target application
+#### Go to the application folder
 ```
-pytest 
+git clone https://github.com/fabandalm/stock-smart-ai
 ```
 
-### run the tests
+```
+docker compose up
+```
+
+### Run the tests
+#### Run in the stock-smart-ai-automation folder
 ```
 pytest --headed
 ```
