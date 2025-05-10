@@ -1,9 +1,12 @@
 from playwright.sync_api import Page
 
-class LoginPage:
+class HomePage:
     def __init__(self, page: Page):
         self.page = page
-        self.username_input = page.locator("#email")
+        self.supplier_link = page.get_by_role("link", name="Suppliers")
+        self.category_link = page.get_by_role("link", name="Categories")
+        self.addProduct_button = page.locator("button[name='Add Product']")
+
         self.password_input = page.locator("#password")
         self.login_button = page.locator("button[type='submit']")
         self.close_button = page.locator("button:has-text('Close modal')")
@@ -22,19 +25,7 @@ class LoginPage:
     #     self.close_button.click()
     #     self.page.wait_for_timeout(1000)
 
-    def get_error_message(self):
-        return self.error_message.text_content()
 
-    def login_fill_username(self, username: str):
-        self.username_input.fill(username)
-        self.page.wait_for_timeout(1000)
-
-    def login_fill_password(self, password: str):
-        self.password_input.fill(password)
-        self.page.wait_for_timeout(1000)
-
-    def login_click_signin(self):
-        self.login_button.click()
-        self.page.wait_for_timeout(1000)
-        self.close_button.click()
+    def home_click_addproduct(self):
+        self.addProduct_button.click()
         self.page.wait_for_timeout(1000)
