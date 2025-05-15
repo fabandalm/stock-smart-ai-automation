@@ -23,6 +23,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python tests.pytest in test_addProduct.py.executor": "Run",
     "Python tests.pytest in test_login.py.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
