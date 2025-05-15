@@ -1,15 +1,8 @@
 import pytest
 from tests.pages.login_page import LoginPage
-from tests.pages.login_page import LoginPage
+from tests.pages.home_page import HomePage
 
-# def test_valid_login(page):
-#     login_page = LoginPage(page)
-#     login_page.goto()
-#     login_page.login("fabandalm", "123456")
-#     assert page.url == "http://localhost/stock"
-
-
-def test_valid_login(page):
+def test_add_product(page):
     login_page = LoginPage(page)
     login_page.goto()
     login_page.login_fill_username("fabandalm")

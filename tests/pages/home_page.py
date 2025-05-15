@@ -7,9 +7,9 @@ class HomePage:
         self.category_link = page.get_by_role("link", name="Categories")
         self.addProduct_button = page.locator("button[name='Add Product']")
 
-        self.password_input = page.locator("#password")
-        self.login_button = page.locator("button[type='submit']")
-        self.close_button = page.locator("button:has-text('Close modal')")
+       # self.password_input = page.locator("#password")
+       # self.login_button = page.locator("button[type='submit']")
+       # self.close_button = page.locator("button:has-text('Close modal')")
         self.logout_link = page.get_by_role("link", name="Logout")
 
 
