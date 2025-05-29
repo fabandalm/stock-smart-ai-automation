@@ -13,14 +13,14 @@ class LoginPage:
     def goto(self):
         self.page.goto("http://localhost")
 
-    # def login(self, username: str, password: str):
-    #     self.username_input.fill(username)
-    #     self.password_input.fill(password)
-    #     self.page.wait_for_timeout(1000)
-    #     self.login_button.click()
-    #     self.page.wait_for_timeout(1000)
-    #     self.close_button.click()
-    #     self.page.wait_for_timeout(1000)
+    def login(self, username: str, password: str):
+         self.username_input.fill(username)
+         self.password_input.fill(password)
+         self.page.wait_for_timeout(1000)
+         self.login_button.click()
+         self.page.wait_for_timeout(1000)
+         self.close_button.click()
+         self.page.wait_for_timeout(1000)
 
     def get_error_message(self):
         return self.error_message.text_content()

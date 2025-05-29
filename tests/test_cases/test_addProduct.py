@@ -1,5 +1,6 @@
 import pytest
 from tests.pages.home_page import HomePage
+from tests.pages.login_page import login_page
 
 #assumption is user already landed on home page
 def test_add_product(page):
